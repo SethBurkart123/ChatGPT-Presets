@@ -36,7 +36,7 @@ const CodeBlock: React.FC<{ language: string; value: string }> = ({ language, va
   return (
     <div className="relative rounded-b-lg bg-zinc-800/40">
       <CodeBlockTitle code={value} language={detectedLanguage} />
-      <div className="p-2 shadow-inner">
+      <div className="p-2 w-full overflow-x-scroll shadow-inner">
         <SyntaxHighlighter language={detectedLanguage} style={{ ...atomDark, 'pre[class*="language-"]': { ...atomDark['pre[class*="language-"]'], backgroundColor: 'transparent', borderRadius: 0, padding: 0 } }}>
           {value}
         </SyntaxHighlighter>
@@ -78,11 +78,8 @@ const ResponseRenderer: React.FC<ResponseRendererProps> = ({
               overrides: {
                 code: {
                   component: ({ className, children, ...props }) => {
-                    const match = /(\w+)/.exec(className || '');
-                    console.log(match);
-                    console.log(className);
-                    return match ? (
-                      <CodeBlock language={match[1]} value={String(children).replace(/\n$/, '')} {...props} />
+                    return className ? (
+                      <CodeBlock language={className.split('-')[1]} value={String(children).replace(/\n$/, '')} {...props} />
                     ) : (
                       <code className={className} {...props}>
                         {children}
@@ -93,7 +90,7 @@ const ResponseRenderer: React.FC<ResponseRendererProps> = ({
                 },
               },
             }}
-            className="max-w-3xl prose prose-invert prose-pre:bg-transparent prose-pre:p-0 prose-pre:rounded-none"
+            className="max-w-2xl prose prose-invert prose-pre:bg-transparent prose-pre:p-0 prose-pre:rounded-none"
           >
             {response}
           </Markdown>
