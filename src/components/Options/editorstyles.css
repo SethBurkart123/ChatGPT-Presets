@@ -1,0 +1,41 @@
+.ProseMirror {
+  background-color: rgb(24 24 27 / 0.2);
+  border-color: rgb(228 228 231 / 0.2);
+  min-height: 300px;
+  width: 100%;
+  padding: 0.5rem;
+  border-width: 1px;
+  border-radius: 0.5rem;
+}
+
+.ProseMirror:focus {
+  border-color: rgb(255 255 255 / 0.5);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.ProseMirror p,
+.ProseMirror ul,
+.ProseMirror ul > li,
+.ProseMirror ul > li > p {
+  margin: 0;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.ProseMirror hr {
+  border: 1;
+  border-top: 1px solid rgb(228 228 231 / 0.2);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  margin-top: 0;
+  //margin-bottom: 0;
+}
