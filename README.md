@@ -1,4 +1,16 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# Introduction
+
+ChatGPT Presets is a Chrome extension that allows you to create and use customizable presets for seamless interaction with the ChatGPT web app. With this extension, you can define preset buttons and input boxes, which will be displayed in a convenient popup UI, enabling you to streamline your ChatGPT conversations.
+
+Features
+Customizable Presets: Create and manage presets with predefined text inputs and buttons tailored to your specific needs.
+Popup UI: Access your presets through a sleek and user-friendly popup interface, eliminating the need to navigate away from the current page.
+Seamless Integration: Leveraging the power of the ChatGPT web app, this extension acts as a bridge, facilitating efficient communication with the AI assistant.
+
+⚠️ Please note that templates are currently slightly broken but will be fixed soon.
+
+# Contributing
+Contributions are welcome! If you encounter any bugs or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 
 ## Getting Started
 
